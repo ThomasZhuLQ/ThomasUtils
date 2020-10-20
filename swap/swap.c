@@ -14,7 +14,7 @@ uint16_t swap16(uint16_t val)
 	return (val << 8) | (val >> 8);
 }
 
-void swap16_buf(void *buffer, size_t length);
+void swap16_buf(void *buffer, size_t length)
 {
 	assert((length % sizeof(uint16_t)) == 0);
 	uint16_t *temp = (uint16_t*)buffer;
@@ -29,7 +29,7 @@ uint32_t swap32(uint32_t val)
 	return (val << 16) | (val >> 16);
 }
 
-void swap32_buf(void *buffer, size_t length);
+void swap32_buf(void *buffer, size_t length)
 {
 	assert((length % sizeof(uint32_t)) == 0);
 	uint32_t *temp = (uint32_t*)buffer;
@@ -45,7 +45,7 @@ uint64_t swap64(uint64_t val)
 	return (val << 32) | (val >> 32);
 }
 
-void swap64_buf(void *buffer, size_t length);
+void swap64_buf(void *buffer, size_t length)
 {
 	assert((length % sizeof(uint64_t)) == 0);
 	uint64_t *temp = (uint64_t*)buffer;

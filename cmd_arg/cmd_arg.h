@@ -20,8 +20,8 @@
 
 #define MAX_SUPPORT_ARG_COUNT		8
 #define MAX_ARG_BUF_SIZE			256
-#define dp_malloc					malloc
-#define dp_free						free
+//#define dp_malloc					malloc
+//#define dp_free						free
 
 typedef char** CMD_ARG;
 
@@ -58,7 +58,7 @@ void CMDARG_Free(CMD_ARG cmd_arg);
 /* Return:                                                                   */
 /*   The pointer of the argument value. Null means argument not found.       */
 /*****************************************************************************/
-const char *CMDARG_ArumentGet(CMD_ARG cmd_arg, uint32_t index);
+const char *CMDARG_ArumentGet(const char **cmd_arg, uint32_t index);
 
 /*****************************************************************************/
 /*     Get the value of the command argument.                                */
@@ -71,7 +71,7 @@ const char *CMDARG_ArumentGet(CMD_ARG cmd_arg, uint32_t index);
 /* Return:                                                                   */
 /*   The pointer of the argument value. Null means argument not found.       */
 /*****************************************************************************/
-const char *CMDARG_ValueGet(CMD_ARG cmd_arg, const char *arg_name);
+const char *CMDARG_ValueGet(const char **cmd_arg, const char *arg_name);
 
 /*****************************************************************************/
 /*     Check the command code is same with the command line.                 */

@@ -46,13 +46,13 @@ void CMDARG_Free(CMD_ARG argv)
 	dp_free(argv);
 }
 
-const char *CMDARG_ArumentGet(CMD_ARG cmd_arg, uint32_t index)
+const char *CMDARG_ArumentGet(const char **cmd_arg, uint32_t index)
 {
 	if(index >= MAX_SUPPORT_ARG_COUNT) return NULL;
 	return cmd_arg[index];
 }
 
-const char *CMDARG_ValueGet(CMD_ARG cmd_arg, const char *arg_name)
+const char *CMDARG_ValueGet(const char **cmd_arg, const char *arg_name)
 {
 	const char **arg_item = cmd_arg;
 	size_t arg_sz = strlen(arg_name);
